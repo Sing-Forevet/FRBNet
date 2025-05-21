@@ -1,5 +1,11 @@
 # 🚀 FRBNet: Revisiting Low-light Vision through Frequency-Domain Radial Basis Network
  - 📄 While the **full code details** will be released in the future, you can still perform testing with the current version.
+ - 📜 Additional details can be found in the supplementary materials.
+
+## 🔀 Pipeline
+<p align="center">
+<img src=fig/pipeline.jpeg>
+</p>
 
 ## 🧠 Abstract
 Low-light vision remains a fundamental challenge in computer vision due to severe illumination degradation, which significantly affects the performance of downstream tasks such as detection and segmentation. While recent state-of-the-art methods have improved performance through invariant feature learning modules, they still fall short due to incomplete modeling of low-light conditions. Therefore, we revisit low-light image formation and extend the classical Lambertian model to better characterize low-light conditions. By shifting our analysis to the frequency domain, we theoretically prove that the frequency-domain channel ratio can be leveraged to extract illumination-invariant features via a structured filtering process. We then propose a novel and end-to-end trainable module named **F**requency-domain **R**adial **B**asis **Net**work (**FRBNet**), which integrates the frequency-domain channel ratio operation with a learnable frequency domain filter for the overall illumination-invariant feature enhancement. As a plug-and-play module, FRBNet can be integrated into existing networks for low-light downstream tasks without modifying loss functions. Extensive experiments across various downstream tasks demonstrate that FRBNet achieves superior performance, including +2.2 mAP for dark object detection and +2.9 mIoU for nighttime segmentation.
@@ -43,11 +49,14 @@ __all__ = [
     ......, 'FRBNet'
 ]
 ```
-### mmdet_official
+
+The pretrained model on the COCO dataset can be download [here](https://download.openmmlab.com/mmdetection/v3.0/yolo/yolov3_d53_mstrain-608_273e_coco/yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth).
+
+### mmdet_official (in the supplementary materials)
 To facilitate reproduction, we also provide a version that integrates FRBNet into MMDet.
 You can use `mmdet_official` to start testing yolov3 directly!
 ## 📂 Dataset
-### ExDark
+**ExDark**
 You can download the official ExDark dataset from [this link](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset). The expected directory structure is as follows:
 ```
 dataset
@@ -68,8 +77,8 @@ dataset
 | |--test.txt
 | |--val.txt
 ```
-More details can be found at [here](./dataset/data_readme.md)
-### DarkFace
+More details can be found at [here](./dataset/data_readme.md) \
+**DarkFace** 
 You can download the official DarkFace dataset from [this link](https://flyywh.github.io/CVPRW2019LowLight/). The expected directory structure is as follows:
 ```
 dataset
@@ -86,7 +95,8 @@ dataset
 | |--test.txt
 | |--val.txt
 ```
-### ACDC-Night
+\
+**ACDC-Night**
 You can download the official ACDC dataset from [this link](https://acdc.vision.ee.ethz.ch/). The expected directory structure is as follows:
 ```
 dataset
@@ -104,7 +114,8 @@ dataset
 |  |----test
 |    |------...
 ```
-### LIS
+\
+**LIS**
 You can download the official LIS dataset from [this link](https://github.com/Linwei-Chen/LISt). The expected directory structure is as follows:
 ```
 dataset
@@ -153,11 +164,6 @@ python tools/test.py configs/yolov3_frbnet_exdark.py [model path] --out [NAME].p
 ./tools/dist_train.sh configs/yolov3_frbnet_exdark.py [model path] GPU_NUM --out [NAME].pkl
 ```
 > We provide a model weights based on YOLOv3 for low-light object detection on the ExDark dataset. You can download the .pth from [here](https://drive.google.com/file/d/1YqI9diTVIzJd7MixVQ7yojWva0WyT9E9/view?usp=drive_link) as [model path] to test.
-
-## 🔀 Pipeline
-<p align="center">
-<img src=fig/pipeline.jpeg>
-</p>
 
 ## ❤️ Acknowledgments
 In this project we use parts of the official implementations of the following works:
