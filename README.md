@@ -52,9 +52,10 @@ __all__ = [
 
 The pretrained model on the COCO dataset can be download [here](https://download.openmmlab.com/mmdetection/v3.0/yolo/yolov3_d53_mstrain-608_273e_coco/yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth).
 
-### mmdet_official (in the supplementary materials)
-To facilitate reproduction, we also provide a version that integrates FRBNet into MMDet.
-You can use `mmdet_official` to start testing yolov3 directly!
+### Version without mmdet_official
+To facilitate reproduction, we will also provide a version without MMDet in the near future.
+You can easy to start FRBNet directly!
+
 ## 📂 Dataset
 **ExDark**
 You can download the official ExDark dataset from [this link](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset). The expected directory structure is as follows:
