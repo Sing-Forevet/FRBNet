@@ -1,6 +1,13 @@
 _base_ = ['../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py']
 load_from = './yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth'
 
+data_preprocessor = dict(
+    type='DetDataPreprocessor',
+    mean=[0, 0, 0],
+    std=[255., 255., 255.],
+    bgr_to_rgb=True,
+    pad_size_divisor=32)
+
 # model settings
 model = dict(
     type='FRBNet',
