@@ -50,7 +50,7 @@ __all__ = [
 ]
 ```
 
-The pretrained model on the COCO dataset can be download [here](https://download.openmmlab.com/mmdetection/v3.0/yolo/yolov3_d53_mstrain-608_273e_coco/yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth).
+The pretrained model on the COCO dataset can be download [here](https://download.openmmlab.com/mmdetection/v2.0/yolo/yolov3_d53_mstrain-608_273e_coco/yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth).
 
 ### Version without mmdet_official
 To facilitate reproduction, we will also provide a version without MMDet in the near future.
@@ -164,7 +164,7 @@ python tools/test.py configs/yolov3_frbnet_exdark.py [model path] --out [NAME].p
 ```
 ./tools/dist_train.sh configs/yolov3_frbnet_exdark.py [model path] GPU_NUM --out [NAME].pkl
 ```
-> We provide a model weights based on YOLOv3 for low-light object detection on the ExDark dataset. You can download the .pth from here (**organizing**) as [model path] to test.
+> We provide a model weights based on YOLOv3 for low-light object detection on the ExDark dataset. You can download the .pth from [here](https://drive.google.com/file/d/1qpMTmblqwYVfDW8rIyJCdsOW6sun7f1l/view?usp=sharing) as [model path] to test.
 
 ## ❤️ Acknowledgments
 In this project we use parts of the official implementations of the following works:
@@ -174,4 +174,4 @@ In this project we use parts of the official implementations of the following wo
 * FeatEnHancer: [FeatEnHancer](https://github.com/khurramHashmi/FeatEnHancer)
 * MAET: [Multitask AET](https://github.com/cuiziteng/ICCV_MAET)
 
-We gratefully acknowledge the authors who have open-sourced their methods. In the same spirit, we are committed to releasing the complete version of our code in the near future.
+We gratefully acknowledge the authors who have open-sourced their methods.
