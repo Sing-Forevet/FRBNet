@@ -1,4 +1,4 @@
-# 🚀 FRBNet: Revisiting Low-light Vision through Frequency-Domain Radial Basis Network
+# 🚀 FRBNet: Revisiting Low-light Vision through Frequency-Domain Radial Basis Network [NeurIPS-2025]
  - 📄 Thrilled to share our work was **Accepted by NeurIPS-25**!
  - 📜 Our paper is available at [Arxiv](https://arxiv.org/abs/2510.23444)!
 
