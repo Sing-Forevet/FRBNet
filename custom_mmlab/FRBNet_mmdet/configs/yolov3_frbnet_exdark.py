@@ -144,7 +144,7 @@ test_evaluator = val_evaluator
 train_cfg = dict(max_epochs=24, val_interval=5)
 
 optim_wrapper = dict(
-    type='AmpOptimWrapper',
+    type='OptimWrapper',
     optimizer=dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0005),
     clip_grad=dict(max_norm=35, norm_type=2))
 
