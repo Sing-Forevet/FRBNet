@@ -160,7 +160,7 @@ param_scheduler = [
 ]
 
 optim_wrapper = dict(
-    type='AmpOptimWrapper',
+    type='OptimWrapper',
     optimizer=dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0005),
      clip_grad=dict(max_norm=35, norm_type=2))
 auto_scale_lr = dict(enable=False, base_batch_size=16)
